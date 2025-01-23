@@ -3,8 +3,25 @@ let peserta = ["A", "B", "C", "D", "E"];
 let nilai = [70, 80, 90, 85, 75];
 let music = ["rock", "pop", "jazz", "dangdut", "kpop"];
 
-music['rock'] = "jpop";
+music["rock"] = "jpop";
 music[5] = "malaysia";
 
-console.log(music.length);
-console.log(music);
+// Push adalah method yang digunakan untuk menambahkan nilai baru ke dalam array. Nilai baru tersebut akan ditempatkan di akhir array.
+barbel = [];
+barbel.push("10kg");
+barbel.push("15kg");
+barbel.push("20kg");
+
+// Pop adalah method yang digunakan untuk menghapus nilai terakhir dari array.
+barbel.pop();
+
+// Unshift adalah method yang digunakan untuk menambahkan nilai baru ke dalam array. Nilai baru tersebut akan ditempatkan di awal array.
+barbel.unshift("5kg");
+
+// Shift adalah method yang digunakan untuk menghapus nilai pertama dari array.
+barbel.shift();
+
+
+// console.log(music.length);
+console.log(barbel);
+// console.log(music);
