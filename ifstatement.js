@@ -47,3 +47,5 @@ if (password.length >= 8) {
 } else {
   console.log("Password harus lebih dari 8 karakter");
 }
+
+
