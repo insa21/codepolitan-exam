@@ -36,16 +36,30 @@ if (hariIni === "senin") {
 
 // nested if statement adalah if statement yang berada di dalam if statement lainnya. Nested if statement digunakan untuk mengecek kondisi lebih lanjut.
 
-const password = prompt("Masukkan password");
+// const password = prompt("Masukkan password");
 
-if (password.length >= 8) {
-  if (password.indexOf(" ") !== -1) {
-    console.log("Password tidak boleh mengandung spasi"); 
-  } else {
-    console.log("Password valid");
-  }
-} else {
-  console.log("Password harus lebih dari 8 karakter");
-}
+// if (password.length >= 8) {
+//   if (password.indexOf(" ") !== -1) {
+//     console.log("Password tidak boleh mengandung spasi");
+//   } else {
+//     console.log("Password valid");
+//   }
+// } else {
+//   console.log("Password harus lebih dari 8 karakter");
+// }
 
+// menggunakan logika AND
+// if (password.length >= 8 && password.indexOf(" ") === -1) {
+//   console.log("Password valid");
+// } else {
+//   console.log("Password tidak valid");
+// }
 
+// menggunakan logika OR
+// const role = prompt("Masukkan role kamu").toLowerCase();
+
+// if (role === "admin" || role === "superadmin") {
+//   console.log("Kamu memiliki akses penuh");
+// } else {
+//   console.log("Kamu memiliki akses terbatas");
+// }

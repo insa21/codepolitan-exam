@@ -22,6 +22,9 @@ if (cuaca === "cerah" || barang === "motor") {
 }
 
 // 3. Operator NOT (!)
+
+
+
 // 4. Operator AND (&&) dan OR (||) bersamaan
 // 5. Operator AND (&&) dan OR (||) bersamaan
 // 6. Operator AND (&&) dan NOT (!) bersamaan
