@@ -12,6 +12,15 @@ if (gender === "male" && age === 18) {
 }
 
 // 2. Operator OR (||)
+let cuaca = "hujan";
+let barang = "payung";
+
+if (cuaca === "cerah" || barang === "motor") {
+  console.log("Kamu membutuhkan payung");
+} else {
+  console.log("Kamu tidak membutuhkan payung");
+}
+
 // 3. Operator NOT (!)
 // 4. Operator AND (&&) dan OR (||) bersamaan
 // 5. Operator AND (&&) dan OR (||) bersamaan
