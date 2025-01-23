@@ -21,7 +21,8 @@ if (age === 18) {
   console.log("Kamu sudah tua");
 }
 
-const hariIni = "minggu";
+// const hariIni = prompt("Hari ini hari apa?").toLowerCase();
+const hariIni = "senin";
 
 if (hariIni === "senin") {
   console.log("Semangat berkerja");
@@ -29,7 +30,20 @@ if (hariIni === "senin") {
   console.log("Semangat berlibur");
 } else if (hariIni === "minggu") {
   console.log("Semoga jangan cepat berakhir");
+} else {
+  console.log("Semangat!");
 }
 
+// nested if statement adalah if statement yang berada di dalam if statement lainnya. Nested if statement digunakan untuk mengecek kondisi lebih lanjut.
 
+const password = prompt("Masukkan password");
 
+if (password.length >= 8) {
+  if (password.indexOf(" ") !== -1) {
+    console.log("Password tidak boleh mengandung spasi"); 
+  } else {
+    console.log("Password valid");
+  }
+} else {
+  console.log("Password harus lebih dari 8 karakter");
+}
