@@ -21,7 +21,19 @@ barbel.unshift("5kg");
 // Shift adalah method yang digunakan untuk menghapus nilai pertama dari array.
 barbel.shift();
 
-
 // console.log(music.length);
 console.log(barbel);
 // console.log(music);
+
+// Nested Array atau Array Bersarang
+
+const data = [
+  ["A", "B", "C"],
+  ["D", "E", "F"],
+  ["G", "H", "I"],
+];
+
+console.log(data[0][0]);
+console.log(data[0][1]);
+console.log(data[0][2]);
+console.log(data[1][0]);
