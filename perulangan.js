@@ -23,3 +23,9 @@
 // for (let i = 10; i >= 1; i--) {
 //   console.log(i);
 // }
+
+// Perulangan Array
+const animals = ["kucing", "kelinci", "panda", "koala", "sapi"];
+for (let i = 0; i < animals.length; i++) {
+  console.log(animals[i]);
+}
