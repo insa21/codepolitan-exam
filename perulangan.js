@@ -25,7 +25,16 @@
 // }
 
 // Perulangan Array
-const animals = ["kucing", "kelinci", "panda", "koala", "sapi"];
-for (let i = 0; i < animals.length; i++) {
-  console.log(animals[i]);
+// const animals = ["kucing", "kelinci", "panda", "koala", "sapi"];
+// for (let i = 0; i < animals.length; i++) {
+//   console.log(animals[i]);
+// }
+
+// Nested Loop
+let str = "LOL";
+for (let i = 0; i <= 4; i++) {
+  console.log("Iterasi ke-" + i);
+  for (let j = 0; j <= str.length; j++) {
+    console.log("  Inner:" + str[j]);
+  }
 }
