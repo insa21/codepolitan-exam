@@ -31,10 +31,26 @@
 // }
 
 // Nested Loop
-let str = "LOL";
-for (let i = 0; i <= 4; i++) {
-  console.log("Iterasi ke-" + i);
-  for (let j = 0; j <= str.length; j++) {
-    console.log("  Inner:" + str[j]);
+// let str = "LOL";
+// for (let i = 0; i <= 4; i++) {
+//   console.log("Iterasi ke-" + i);
+//   for (let j = 0; j <= str.length; j++) {
+//     console.log("  Inner:" + str[j]);
+//   }
+// }
+
+// Nested Array
+
+const animals = [
+  ["kucing", "kelinci", "panda"],
+  ["koala", "sapi", "gajah"],
+  ["jerapah", "kuda", "kambing"],
+];
+
+for (let i = 0; i < animals.length; i++) {
+  const animalsGroup = animals[i];
+  console.log("Group " + (i + 1));
+  for (let j = 0; j < animalsGroup.length; j++) {
+    console.log("  ",animalsGroup[j]);
   }
 }
