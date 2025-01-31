@@ -52,4 +52,17 @@ function jumlahkan(a, b) {
   return a + b;
 }
 
-console.log(jumlahkan('hdhhd'));
+console.log(jumlahkan("hdhhd"));
+
+console.log("=============================================");
+
+// Scope pada function JS
+let programming = "Javascript";
+
+function typeSafe() {
+  let programming = "TypeScript";
+  console.log(programming);
+}
+
+console.log(programming);
+typeSafe();
