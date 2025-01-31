@@ -64,5 +64,34 @@ function typeSafe() {
   console.log(programming);
 }
 
-console.log(programming);
 typeSafe();
+console.log(programming);
+
+console.log("=============================================");
+
+// Blocked scope variable
+
+// let nilai = 5;
+// if (nilai > 7) {
+//   let hasil = "Lulus";
+//   console.log(hasil);
+// } else {
+//   let hasil = "Tidak Lulus";
+//   console.log(hasil);
+// }
+
+// console.log(nilai);
+
+let tinggi = 8;
+if (tinggi > 5) {
+  var lebar = 10;
+  console.log(lebar);
+}
+
+console.log(`Lebar: ${lebar}`);
+
+for (let i = 0; i < 10; i++) {
+  var lebar = i;
+}
+
+console.log(`Lebar: ${lebar}`);
