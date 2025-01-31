@@ -41,16 +41,34 @@
 
 // Nested Array
 
-const animals = [
-  ["kucing", "kelinci", "panda"],
-  ["koala", "sapi", "gajah"],
-  ["jerapah", "kuda", "kambing"],
-];
+// const animals = [
+//   ["kucing", "kelinci", "panda"],
+//   ["koala", "sapi", "gajah"],
+//   ["jerapah", "kuda", "kambing"],
+// ];
 
-for (let i = 0; i < animals.length; i++) {
-  const animalsGroup = animals[i];
-  console.log("Group " + (i + 1));
-  for (let j = 0; j < animalsGroup.length; j++) {
-    console.log("  ",animalsGroup[j]);
-  }
-}
+// for (let i = 0; i < animals.length; i++) {
+//   const animalsGroup = animals[i];
+//   console.log("Group " + (i + 1));
+//   for (let j = 0; j < animalsGroup.length; j++) {
+//     console.log("  ",animalsGroup[j]);
+//   }
+// }
+
+// Break
+// let = input = prompt("Masukkan kalimat: ");
+// while (true) {
+//   input = prompt(input);
+//   if (input.toLowerCase() === "stop") {
+//     break;
+//   }
+
+//   alert(okeee);
+// }
+
+// for (let i = 1; i <= 10; i++) {
+//   if (i === 5) {
+//     break;
+//   }
+//   console.log(i);
+// }
