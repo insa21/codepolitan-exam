@@ -110,3 +110,21 @@ const perpangkatan = function (nilai) {
 };
 
 console.log(perpangkatan(5));
+
+
+
+console.log("=============================================");
+
+
+// Function sebagai argument
+function duaKali (func){
+  func();
+  func();
+}
+
+function  lemparDadu(){
+  const hasil = Math.floor(Math.random() * 6) + 1;
+  console.log(hasil);
+}
+
+console.log(duaKali(lemparDadu));
