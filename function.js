@@ -111,20 +111,61 @@ const perpangkatan = function (nilai) {
 
 console.log(perpangkatan(5));
 
-
-
 console.log("=============================================");
 
-
 // Function sebagai argument
-function duaKali (func){
+function duaKali(func) {
   func();
   func();
 }
 
-function  lemparDadu(){
+function lemparDadu() {
   const hasil = Math.floor(Math.random() * 6) + 1;
   console.log(hasil);
 }
 
 console.log(duaKali(lemparDadu));
+
+console.log("=============================================");
+
+// Function Bernilai Balik Function
+
+function hasilnyaAdalahFunction() {
+  const rand = Math.random();
+
+  if (rand > 0.1) {
+    return function () {
+      console.log("Nilai lebih dari 0.1");
+    };
+  } else {
+    return function () {
+      console.log("Nilai kurang dari 0.1");
+    };
+  }
+}
+
+const hasil = hasilnyaAdalahFunction();
+
+
+console.log("=============================================");
+// Definisi Sebuah Method
+
+const aritmatika = {
+  perkalian: function (a, b) {
+    return a * b;
+  },
+  pembagian: function (a, b) {
+    return a / b;
+  },
+  penjumlahan: function (a, b) {
+    return a + b;
+  },
+  pengurangan: function (a, b) {
+    return a - b;
+  }
+}
+
+console.log(aritmatika.perkalian(5, 10));
+console.log(aritmatika.pembagian(5, 10));
+console.log(aritmatika.penjumlahan(5, 10));
+console.log(aritmatika.pengurangan(5, 10));
