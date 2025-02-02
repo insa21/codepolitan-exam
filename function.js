@@ -146,7 +146,6 @@ function hasilnyaAdalahFunction() {
 
 const hasil = hasilnyaAdalahFunction();
 
-
 console.log("=============================================");
 // Definisi Sebuah Method
 
@@ -162,10 +161,28 @@ const aritmatika = {
   },
   pengurangan: function (a, b) {
     return a - b;
-  }
-}
+  },
+};
 
 console.log(aritmatika.perkalian(5, 10));
 console.log(aritmatika.pembagian(5, 10));
 console.log(aritmatika.penjumlahan(5, 10));
 console.log(aritmatika.pengurangan(5, 10));
+
+console.log("=============================================");
+
+// This pada function
+
+const saya = {
+  nama: "John",
+  umur: 30,
+  sapa: function () {
+    console.log(
+      `Halo, nama saya ${this.nama} dan umur saya ${this.umur} tahun`
+    );
+  },
+};
+
+saya.sapa();
+saya.nama = "Doe";
+saya.sapa();
