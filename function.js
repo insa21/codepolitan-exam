@@ -173,16 +173,50 @@ console.log("=============================================");
 
 // This pada function
 
-const saya = {
-  nama: "John",
-  umur: 30,
-  sapa: function () {
-    console.log(
-      `Halo, nama saya ${this.nama} dan umur saya ${this.umur} tahun`
-    );
-  },
+// const saya = {
+//   nama: "John",
+//   umur: 30,
+//   sapa: function () {
+//     console.log(
+//       `Halo, nama saya ${this.nama} dan umur saya ${this.umur} tahun`
+//     );
+//   },
+// };
+
+// saya.sapa();
+// saya.nama = "Doe";
+// saya.sapa();
+
+console.log("=============================================");
+// Arrow Function
+
+const perkalian = (a, b) => {
+  return a * b;
 };
 
-saya.sapa();
-saya.nama = "Doe";
-saya.sapa();
+console.log(perkalian(5, 10));
+
+console.log("=============================================");
+// try and catch
+
+try {
+  saya.sapa();
+} catch {
+  console.log("Error");
+}
+
+console.log("setelah proses try catch");
+
+// contoh try and catch pada function
+
+function manggil(msg) {
+  try {
+    console.log(msg.toUpperCase());
+  } catch (error) {
+    console.log(error);
+    console.log("Silahkan masukan tipe data string");
+  }
+}
+
+manggil(123);
+manggil("Hello");
