@@ -96,3 +96,17 @@ for (let i = 0; i < 10; i++) {
 
 console.log(`Lebar: ${lebar}`);
 
+console.log("=============================================");
+// Function Expression
+
+// function perpangkatan(nilai) {
+//   return nilai * nilai;
+// }
+
+// let hasil = perpangkatan(5);
+
+const perpangkatan = function (nilai) {
+  return nilai * nilai;
+};
+
+console.log(perpangkatan(5));
