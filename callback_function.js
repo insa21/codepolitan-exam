@@ -94,16 +94,57 @@ console.log(
 
 // setTimeout & setInterval
 
-console.log("mulai...");
-setTimeout(() => {
-  console.log("gw udah di tengah tengah nihh...");
-}, 3000);
-console.log("selesai...");
+// console.log("mulai...");
+// setTimeout(() => {
+//   console.log("gw udah di tengah tengah nihh...");
+// }, 3000);
+// console.log("selesai...");
 
-const interval = setInterval(() => {
-  console.log(Math.random());
-}, 2000);
+// const interval = setInterval(() => {
+//   console.log(Math.random());
+// }, 2000);
 
-setTimeout(() => {
-  clearInterval(interval);
-}, 10000);
+// setTimeout(() => {
+//   clearInterval(interval);
+// }, 10000);
+
+console.log(
+  "==========================================================================================="
+);
+
+// filter, map and find
+
+const angkaa = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const angkaGenap = angkaa.filter(function (el) {
+  return el % 2 === 0;
+});
+const angkaBaru = angkaa.filter((n) => n < 5);
+const angkaGanjil = angkaa.filter((n) => n % 2 !== 0);
+
+// Rating film Menggunakan data yang diatas
+const filmsRatingBagus = films.filter(function (film) {
+  return film.rating > 8.5;
+});
+
+const filmsRatingJelek = films.filter(function (film) {
+  return film.rating < 8.5;
+});
+
+const filmsBaru = films.filter(function (film) {
+  return film.tahun > 2010;
+});
+
+console.log(angkaGenap);
+console.log(angkaGanjil);
+console.log(angkaBaru);
+
+// menampilkan di console untuk rating film
+console.log(filmsRatingBagus);
+console.log(filmsRatingJelek);
+console.log(filmsBaru);
+
+// Maping films diatas
+const filmBagus = filmsRatingBagus.map((film) => film.judul);
+console.log(filmBagus);
+
+
