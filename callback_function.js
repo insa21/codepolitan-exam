@@ -147,4 +147,57 @@ console.log(filmsBaru);
 const filmBagus = filmsRatingBagus.map((film) => film.judul);
 console.log(filmBagus);
 
+console.log(
+  "==========================================================================================="
+);
 
+// Every mengembalikan nilai True jika semua kriteria dalam array terpenuhi namun mengembalikan nilai false jika sebaliknya atau salah satu kriteria tidak terpenuhi
+// Some lebih fleksibel karena hanya memilih salah satu nilai yang ada dalam array maka akan mengembalikan nilai true
+
+//Every
+const kataKata = ["kita", "kamu", "saya", "dia"];
+const cekEvery = kataKata.every((kata) => {
+  return kata.length === 4;
+});
+
+// Some
+const cekSome = kataKata.some((kata) => {
+  return kata.length === 4;
+});
+
+// cek dari film diatas
+const cekFilmNew = films.some((film) => {
+  return film.tahun > 2010;
+});
+
+console.log(cekEvery);
+console.log(cekSome);
+// cekFilm
+
+console.log(cekFilmNew);
+
+//reduce : melakukan proses sebanyaknyaa element milik suatu array. Nilai baliknya adalah single value
+
+const exam = [80, 76, 65, 100, 90, 30];
+
+// let total = 0;
+
+// for (let score of exam){
+//   total += score
+// }
+
+// console.log(total)
+
+const total = exam.reduce((total, score) => {
+  return total + score;
+});
+
+const bestFilm = films.reduce((bestFilm, currentFilm) => {
+  console.log(bestFilm, currentFilm);
+  if (currentFilm.rating > bestFilm) {
+    return currentFilm;
+  }
+  return bestFilm
+});
+
+// console.log(bestFilm, currentFilm);
