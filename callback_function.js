@@ -79,8 +79,6 @@ console.log(
 // const hasil = perpangkatan(7);
 // console.log(hasil);
 
-
-
 // implicit return Arrow Function
 const perpangkatan = (x) => x * x;
 
@@ -89,3 +87,23 @@ console.log(hasil);
 
 const random = () => Math.floor(Math.random() * 1000);
 console.log(random());
+
+console.log(
+  "==========================================================================================="
+);
+
+// setTimeout & setInterval
+
+console.log("mulai...");
+setTimeout(() => {
+  console.log("gw udah di tengah tengah nihh...");
+}, 3000);
+console.log("selesai...");
+
+const interval = setInterval(() => {
+  console.log(Math.random());
+}, 2000);
+
+setTimeout(() => {
+  clearInterval(interval);
+}, 10000);
