@@ -56,7 +56,6 @@ console.log(
 
 //todo: Callback Function - Arrow Function
 
-
 // function normal
 // function perpangkatan(x) {
 //   return x * x;
@@ -65,7 +64,6 @@ console.log(
 // const hasil = perpangkatan(7);
 // console.log(hasil);
 
-
 // function expression
 // const perpangkatan = function (x) {
 //   return x * x;
@@ -73,11 +71,21 @@ console.log(
 // const hasil = perpangkatan(7);
 // console.log(hasil);
 
-
 // function arrow
-const perpangkatan = (x) => {
-  return x * x;
-}
+// const perpangkatan = (x) => {
+//   return x * x;
+// }
+
+// const hasil = perpangkatan(7);
+// console.log(hasil);
+
+
+
+// implicit return Arrow Function
+const perpangkatan = (x) => x * x;
 
 const hasil = perpangkatan(7);
 console.log(hasil);
+
+const random = () => Math.floor(Math.random() * 1000);
+console.log(random());
