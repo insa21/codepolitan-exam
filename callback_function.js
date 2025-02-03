@@ -31,10 +31,53 @@ const films = [
   },
 ];
 
-films.forEach(function (film , index) {
+films.forEach(function (film, index) {
   console.log(
     `${index} Judul ${film.judul} \n- Tahun: ${film.tahun} \n - Rating: ${film.rating}`
   );
 });
 
+console.log(
+  "==========================================================================================="
+);
 
+// Callback Function - Map
+const expression = ["rouf", "muf", "mif", "mof", "mef"];
+const capsExpression = expression.map(function (exprs) {
+  return exprs.toUpperCase();
+});
+
+console.log(expression);
+console.log(capsExpression);
+
+console.log(
+  "==========================================================================================="
+);
+
+//todo: Callback Function - Arrow Function
+
+
+// function normal
+// function perpangkatan(x) {
+//   return x * x;
+// }
+
+// const hasil = perpangkatan(7);
+// console.log(hasil);
+
+
+// function expression
+// const perpangkatan = function (x) {
+//   return x * x;
+// }
+// const hasil = perpangkatan(7);
+// console.log(hasil);
+
+
+// function arrow
+const perpangkatan = (x) => {
+  return x * x;
+}
+
+const hasil = perpangkatan(7);
+console.log(hasil);
