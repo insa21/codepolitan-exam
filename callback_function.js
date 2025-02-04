@@ -212,8 +212,33 @@ function lemparDadu(sisi = 6) {
 
 console.log(lemparDadu());
 
-function sapa(name="Neng Batok", msg="Tara Nulis") {
+function sapa(name = "Neng Batok", msg = "Tara Nulis") {
   console.log(`Halo ${name}, ${msg}`);
 }
 
-console.log(sapa())
+console.log(sapa());
+
+console.log(
+  "==========================================================================================="
+);
+
+// Spread operator pada function
+// const angkaaa= (1,2,3,4,5);
+
+// Math.max(angkaaa);
+// Math.max(...angkaaa);
+
+// console.log(angkaaa);
+
+console.log(
+  "==========================================================================================="
+);
+
+// Marge Array dengan spread Operator: menggabungkan array satu dengan lainnya dengan spread operator
+
+const nomer = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const nama = ["alex", "boby", "bimo", "coi", "cukai"];
+
+const campuran = [...angka, 0, ...nama, "alise"];
+
+console.log(campuran);
