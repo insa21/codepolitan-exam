@@ -242,3 +242,16 @@ const nama = ["alex", "boby", "bimo", "coi", "cukai"];
 const campuran = [...angka, 0, ...nama, "alise"];
 
 console.log(campuran);
+
+// Merge object dengan spread operator
+
+const user = {
+  name: "Neng Batok",
+  age: 20,
+  address: "Jl. Batok",
+};
+
+const userBaru = { ...user, id: 234, password: "ahhhhcape" };
+
+
+console.log(userBaru)
