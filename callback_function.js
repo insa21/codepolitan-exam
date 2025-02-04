@@ -253,5 +253,38 @@ const user = {
 
 const userBaru = { ...user, id: 234, password: "ahhhhcape" };
 
+console.log(userBaru);
 
-console.log(userBaru)
+// Rest Param
+// Rest parameter adalah parameter yang dapat menerima banyak argumen
+
+const sumAll = (...nums) => {
+  return nums.reduce((total, el) => total + el);
+};
+
+// menjumlahkan semua data
+console.log(sumAll(1, 2, 34, 455, 3, 3));
+
+// memanggil variabel nama dari atas
+const pemenang = (gold, silver, bronze, ...sisa) => {
+  console.log(`Mendali emas diraih: ${gold}`);
+  console.log(`Mendali perak diraih: ${silver}`);
+  console.log(`Mendali perunggu diraih: ${bronze}`);
+  console.log(`Peserta liannya: ${sisa}`);
+};
+
+pemenang(...nama);
+
+console.log("======================================")
+const [gold, silver, bronze, ...peserta] = nama;
+console.log(gold, silver, bronze, peserta);
+
+
+
+// Distracting mengambil data film diatas
+
+const film = films.map(({judul, tahun, rating})=>{
+  return `Judul: ${judul}, Tahun: ${tahun}, Rating: ${rating}`
+})
+
+console.log(film)
