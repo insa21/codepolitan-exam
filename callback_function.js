@@ -197,7 +197,23 @@ const bestFilm = films.reduce((bestFilm, currentFilm) => {
   if (currentFilm.rating > bestFilm) {
     return currentFilm;
   }
-  return bestFilm
+  return bestFilm;
 });
 
 // console.log(bestFilm, currentFilm);
+
+console.log(
+  "==========================================================================================="
+);
+
+function lemparDadu(sisi = 6) {
+  return Math.floor(Math.random() * sisi) + 1;
+}
+
+console.log(lemparDadu());
+
+function sapa(name="Neng Batok", msg="Tara Nulis") {
+  console.log(`Halo ${name}, ${msg}`);
+}
+
+console.log(sapa())
