@@ -59,20 +59,65 @@
 
 // Event input dan change pada form
 
-const form = document.querySelector("form");
-const input = document.querySelector("input");
-const list = document.querySelector("#notes");
+// const form = document.querySelector("form");
+// const input = document.querySelector("input");
+// const list = document.querySelector("#notes");
 
-input.addEventListener("change", () => {
-  document.querySelector("h1").innerText = input.value;
-  console.log("nilai berhasil di input");
-});
+// input.addEventListener("change", () => {
+//   document.querySelector("h1").innerText = input.value;
+//   console.log("nilai berhasil di input");
+// });
+
+// form.addEventListener("submit", function (e) {
+//   e.preventDefault();
+//   const noteValue = input.value;
+//   const newList = document.createElement("li");
+//   newList.textContent = noteValue;
+//   list.appendChild(newList);
+//   input.value = "";
+// });
+
+// const button = document.querySelector("#changeColor");
+// const container = document.querySelector("#container");
+
+// button.addEventListener("click", function (e) {
+//   container.style.backgroundColor = generateRandomColor();
+//   e.stopPropagation();
+// });
+
+// container.addEventListener("click", function (e) {
+//   container.classList.toggle("hide");
+// });
+
+// const generateRandomColor = () => {
+//   const r = Math.floor(Math.random() * 255);
+//   const g = Math.floor(Math.random() * 255);
+//   const b = Math.floor(Math.random() * 255);
+
+//   return `rgb(${r}, ${g}, ${b})`;
+// };
+
+// Mengenal Event Delegation
+const form = document.querySelector("#form");
+const input = document.querySelector("#input");
+const list = document.querySelector("#notes");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   const noteValue = input.value;
   const newList = document.createElement("li");
-  newList.textContent = noteValue;
-  list.appendChild(newList);
+  newList.innerText = noteValue;
+  list.append(newList);
   input.value = "";
 });
+
+list.addEventListener("click", function (e) {
+  e.target.nodeName === 'LI' && e.target.remove();
+});
+
+// const lis = document.querySelectorAll("li");
+// for (let li of lis) {
+//   li.addEventListener("click", function (e) {
+//     e.target.remove();
+//   });
+// }

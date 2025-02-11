@@ -21,3 +21,5 @@ function colorize() {
   this.style.backgroundColor = generateRandomColor();
   this.style.color = generateRandomColor();
 }
+
+
