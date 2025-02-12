@@ -46,18 +46,44 @@
 //     console.log("Error", err);
 //   });
 
-const loadPeople = async () => {
-  try {
-    const res = await fetch("https://swapi.dev/api/people/1/");
-    const data = await res.json();
-    console.log(data);
+// Cara terbaru paling mudah menggunakan Fetch
 
-    const res2 = await fetch("https://swapi.dev/api/people/2/");
-    const data2 = await res2.json();
-    console.log(data2);
-  } catch (err) {
-    console.log("Error nihh ganti-ganti pesannya:", err);
+// const loadPeople = async () => {
+//   try {
+//     const res = await fetch("https://swapi.dev/api/people/1/");
+//     const data = await res.json();
+//     console.log(data);
+
+//     const res2 = await fetch("https://swapi.dev/api/people/2/");
+//     const data2 = await res2.json();
+//     console.log(data2);
+//   } catch (err) {
+//     console.log("Error nihh ganti-ganti pesannya:", err);
+//   }
+// };
+
+// loadPeople();
+
+// Axios
+// axios
+//   .get("https://swapi.dev/api/people/11111/")
+//   .then((res) => {
+//     console.log(res.data);
+//   })
+//   .catch((err) => {
+//     console.log("Error", err);
+//     alert(err.message);
+//   });
+
+// Axios Async Await
+const getPeople = async (id) => {
+  try {
+    const res = await axios.get(`https://swapi.dev/api/people/${id}`);
+    console.log(res.data);
+  } catch (error) {
+    console.log(error);
+    console.log(error.message);
+    console.log(error.response.status);
+    console.log(error.response.data);
   }
 };
-
-loadPeople();
