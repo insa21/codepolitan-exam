@@ -11,8 +11,28 @@
 
 <body>
 
-  <div id="app">
-    <h2>{{ name }}</h2>
+  <div id="app" class="container mt-4">
+    <h2 class="mb-3">Product List</h2>
+
+    <table class="table table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Image</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="product in products" :key="product.name">
+          <td>{{ product.name }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.quantity }}</td>
+          <td><img :src="product.image" alt="Product Image" width="50"></td>
+        </tr>
+      </tbody>
+    </table>
+
   </div>
 
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
