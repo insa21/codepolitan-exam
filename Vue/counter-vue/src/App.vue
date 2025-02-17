@@ -1,26 +1,41 @@
-<script>
-// import { ref } from 'vue';
-// const count = ref(0);
+<script setup>
+import { ref } from 'vue';
+const count = ref(0);
 
-export default {
-    data() {
-        return {
-            count: 0,
-        };
-    },
+// Option API
+// export default {
+//     data() {
+//         return {
+//             count: 0,
+//         };
+//     },
 
-    methods: {
-        increment() {
-            this.count++;
-        },
-        decrement() {
-            this.count--;
-        },
-        reset() {
-            this.count = 0;
-        },
-    },
-};
+//     methods: {
+//         increment() {
+//             this.count++;
+//         },
+//         decrement() {
+//             this.count--;
+//         },
+//         reset() {
+//             this.count = 0;
+//         },
+//     },
+// };
+
+function increment() {
+    count.value++;
+}
+
+function decrement() {
+    count.value--;
+}
+
+function reset() {
+    count.value = 0;
+}
+
+
 </script>
 
 <template>
