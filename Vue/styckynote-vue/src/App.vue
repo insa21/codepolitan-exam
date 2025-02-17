@@ -1,9 +1,17 @@
+<script setup>
+
+import { ref } from 'vue'
+const showForm = ref(false);
+
+
+</script>
+
 <template>
   <main>
     <div class="container">
       <header>
         <h1 class="header-title">Memo</h1>
-        <button class="header-button">+</button>
+        <button @click="showForm = true" class="header-button">+</button>
       </header>
       <div class="card-container">
         <div class="card">
@@ -29,6 +37,13 @@
         </div>
       </div>
 
+    </div>
+    <div v-if="showForm" class="form-overlay">
+      <div class="form-modal">
+        <button @click="showForm = false" class="form-close-btn">&times;</button>
+        <textarea name="memo" id="memo" cols="30" rows="10"></textarea>
+        <button class="form-save-button ">Save</button>
+      </div>
     </div>
   </main>
 </template>
@@ -85,5 +100,54 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+
+.form-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.77);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-modal {
+  width: 420px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-save-button {
+  padding: 10px 20px;
+  font-size: 20px;
+  width: 100%;
+  background-color: #495a7d;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 15px;
+  color: #fff;
+}
+
+
+.form-close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  font-size: 25px;
+  cursor: pointer;
 }
 </style>
