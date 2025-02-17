@@ -2,47 +2,46 @@
 
 import { ref } from 'vue'
 const showForm = ref(false);
+const newMemo = ref("");
+const memos = ref([]);
 
+function addMemo() {
+  memos.value.push({
+    id: Date.now(),
+    memo: newMemo.value,
+    date: new Date().toLocaleDateString("id-ID"),
+    backgroundColor: getRandomColor(),
+  })
+  newMemo.value = "";
+  showForm.value = false;
+}
+
+function getRandomColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
 
 </script>
 
 <template>
   <main>
+    {{ memos }}
     <div class="container">
       <header>
         <h1 class="header-title">Memo</h1>
         <button @click="showForm = true" class="header-button">+</button>
       </header>
       <div class="card-container">
-        <div class="card">
-          <p class="card-content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt excepturi maxime nobis ipsa dolore impedit
-            atque laboriosam laudantium? Ut nemo quo maiores pariatur iusto atque, eum ipsam velit sit modi?
-          </p>
-          <p class="card-date">12/12/2021</p>
-        </div>
-        <div class="card">
-          <p class="card-content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt excepturi maxime nobis ipsa dolore impedit
-            atque laboriosam laudantium? Ut nemo quo maiores pariatur iusto atque, eum ipsam velit sit modi?
-          </p>
-          <p class="card-date">12/12/2021</p>
-        </div>
-        <div class="card">
-          <p class="card-content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt excepturi maxime nobis ipsa dolore impedit
-            atque laboriosam laudantium? Ut nemo quo maiores pariatur iusto atque, eum ipsam velit sit modi?
-          </p>
-          <p class="card-date">12/12/2021</p>
+        <div v-for="memo in memos" :key="memo.id" class="card" :style="{ backgroundColor: memo.backgroundColor }">
+          <p class="card-content">{{ memo.memo }}</p>
+          <p class="card-date">{{ memo.date }}</p>
         </div>
       </div>
-
     </div>
     <div v-if="showForm" class="form-overlay">
       <div class="form-modal">
         <button @click="showForm = false" class="form-close-btn">&times;</button>
-        <textarea name="memo" id="memo" cols="30" rows="10"></textarea>
-        <button class="form-save-button ">Save</button>
+        <textarea v-model="newMemo" name="memo" id="memo" cols="30" rows="10"></textarea>
+        <button @click="addMemo" class="form-save-button ">Save</button>
       </div>
     </div>
   </main>
