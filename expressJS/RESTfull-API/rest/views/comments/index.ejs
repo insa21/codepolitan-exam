@@ -12,9 +12,17 @@
   <% for(let comment of comments) { %>
     <li>
       like: <%= comment.likes %> |
-        <%= comment.comment %> - <%= comment.name %>
+        <%= comment.comment %> - <%= comment.name %> |
+            <a href="/comments/<%= comment.id %>">Detail</a> |
+            <a href="/comments/<%= comment.id %>/edit">Edit</a> |
+            <form action="/comments/<%= comment.id %>?_method=DELETE" method="POST">
+              <button>Delete</button>
+            </form>
     </li>
     <% } %>
+
+      <br><br>
+      <a href="/comments/create">Add</a>
 
 </body>
 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Comment</title>
+</head>
+
+<body>
+  <h1>Edit Comment</h1>
+  <form method="POST" action="/comments/<%= comment.id %>?_method=PATCH">
+    <section>
+      <label for="likes">Likes</label>
+      <input type="number" name="likes" id="likes" required value="<%= comment.likes %>" min="0">
+    </section>
+    <section>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" required value="<%= comment.name %>" placeholder="Enter your name">
+    </section>
+    <section>
+      <label for="comment">Comment</label>
+      <textarea name="comment" id="comment" required
+        placeholder="Write your comment..."><%= comment.comment %></textarea>
+    </section>
+    <button type="submit">Update Comment</button>
+  </form>
+  <br>
+  <a href="/comments">Back</a>
+</body>
+
+</html>

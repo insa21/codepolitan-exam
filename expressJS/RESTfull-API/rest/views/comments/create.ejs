@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Comment</title>
+</head>
+
+<body>
+  <h1>Create Comment</h1>
+  <form method="post" action="/comments">
+    <section>
+      <label for="likes">likes</label>
+      <input type="text" name="likes" id="likes" required>
+    </section>
+    <section>
+      <label for="name">name</label>
+      <input type="text" name="name" id="name" required>
+    </section>
+    <section>
+      <label for="comment">comment</label>
+      <textarea type="text" name="comment" id="comment" required></textarea>
+    </section>
+    <button type="submit">Submit</button>
+  </form>
+  <br>
+  <a href="/comments">Back</a>
+
+
+</body>
+
+</html>
