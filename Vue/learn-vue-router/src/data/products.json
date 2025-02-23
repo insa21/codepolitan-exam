@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop A",
+    "price": 100,
+    "year": 2021
+  },
+  {
+    "id": 2,
+    "name": "Laptop B",
+    "price": 150,
+    "year": 2022
+  },
+  {
+    "id": 3,
+    "name": "Laptop C",
+    "price": 200,
+    "year": 2023
+  },
+  {
+    "id": 4,
+    "name": "Tablet D",
+    "price": 250,
+    "year": 2021
+  },
+  {
+    "id": 5,
+    "name": "Smartphone E",
+    "price": 300,
+    "year": 2022
+  },
+  {
+    "id": 6,
+    "name": "Smartwatch F",
+    "price": 350,
+    "year": 2023
+  },
+  {
+    "id": 7,
+    "name": "Laptop G",
+    "price": 400,
+    "year": 2021
+  },
+  {
+    "id": 8,
+    "name": "Tablet H",
+    "price": 450,
+    "year": 2022
+  },
+  {
+    "id": 9,
+    "name": "Smartphone I",
+    "price": 500,
+    "year": 2023
+  },
+  {
+    "id": 10,
+    "name": "Smartwatch J",
+    "price": 550,
+    "year": 2021
+  }
+]
