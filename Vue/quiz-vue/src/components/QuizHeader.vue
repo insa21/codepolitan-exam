@@ -1,11 +1,17 @@
+<script setup>
+import { defineProps } from 'vue';
+
+const props = defineProps(['questionPage', 'barPercentage']);
+</script>
+
 <template>
   <header>
     <div class="progress-info">
-      <span class="progress-text">Question 1/2</span>
-      <span class="progress-percent">50%</span>
+      <span class="progress-text">Question {{ props.questionPage }}</span>
+      <span class="progress-percent">{{ props.barPercentage }}</span>
     </div>
     <div class="progress-bar">
-      <div class="progress-fill"></div>
+      <div class="progress-fill" :style="{ width: props.barPercentage }"></div>
     </div>
   </header>
 </template>
@@ -29,7 +35,6 @@
 }
 
 .progress-fill {
-  width: 50%;
   height: 100%;
   background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
   border-radius: 20px;

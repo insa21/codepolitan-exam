@@ -1,22 +1,30 @@
+<script setup>
+import { defineProps } from 'vue';
+
+const props = defineProps(['question']);
+
+const emit = defineEmits(['selectOption']);
+
+function emitSelectedOption(option) {
+  emit('selectOption', option);
+}
+
+</script>
 <template>
-  <div>
+  <div v-if="props.question">
     <section class="question-container">
-      <h1 class="question-title">What is 1+1?</h1>
+      <h1 class="question-title">{{ props.question.text }}</h1>
     </section>
     <section class="options-container">
-      <div class="option-card">
-        <div class="option-label">A</div>
-        <div class="option-content">2</div>
-      </div>
-      <div class="option-card">
-        <div class="option-label">B</div>
-        <div class="option-content">5</div>
-      </div>
-      <div class="option-card">
-        <div class="option-label">C</div>
-        <div class="option-content">Ingat kamu bukan siapa siapa cihhhh...</div>
+      <div class="option-card" v-for="option in props.question.answers" :key="option.id"
+        @click="() => emitSelectedOption(option)">
+        <div class="option-label">{{ option.label }}</div>
+        <div class="option-content">{{ option.text }}</div>
       </div>
     </section>
+  </div>
+  <div v-else>
+    <p>Loading question...</p>
   </div>
 </template>
 
