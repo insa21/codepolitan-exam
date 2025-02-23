@@ -1,72 +1,112 @@
 [
   {
     "id": 1,
-    "name": "Laptop A",
-    "price": 100,
+    "name": "Laptop X",
+    "price": 120,
     "year": 2021,
-    "description": "A budget-friendly laptop suitable for everyday tasks."
+    "description": "A compact laptop with decent performance for daily use.",
+    "owner": {
+      "name": "Alice Johnson",
+      "email": "alice.johnson@example.com"
+    }
   },
   {
     "id": 2,
-    "name": "Laptop B",
-    "price": 150,
+    "name": "Laptop Y",
+    "price": 180,
     "year": 2022,
-    "description": "A mid-range laptop with enhanced performance and features."
+    "description": "A powerful laptop with a sleek design and high-end features.",
+    "owner": {
+      "name": "Bob Smith",
+      "email": "bob.smith@example.com"
+    }
   },
   {
     "id": 3,
-    "name": "Laptop C",
-    "price": 200,
+    "name": "Laptop Z",
+    "price": 220,
     "year": 2023,
-    "description": "A high-performance laptop for gaming and professional use."
+    "description": "A gaming laptop with top-notch graphics and performance.",
+    "owner": {
+      "name": "Charlie Brown",
+      "email": "charlie.brown@example.com"
+    }
   },
   {
     "id": 4,
-    "name": "Tablet D",
-    "price": 250,
+    "name": "Tablet Alpha",
+    "price": 260,
     "year": 2021,
-    "description": "A versatile tablet perfect for media consumption and light work."
+    "description": "A lightweight tablet perfect for reading and browsing.",
+    "owner": {
+      "name": "Diana Prince",
+      "email": "diana.prince@example.com"
+    }
   },
   {
     "id": 5,
-    "name": "Smartphone E",
-    "price": 300,
+    "name": "Smartphone Beta",
+    "price": 320,
     "year": 2022,
-    "description": "A smartphone with a great balance of features and price."
+    "description": "A smartphone with excellent camera quality and battery life.",
+    "owner": {
+      "name": "Ethan Hunt",
+      "email": "ethan.hunt@example.com"
+    }
   },
   {
     "id": 6,
-    "name": "Smartwatch F",
-    "price": 350,
+    "name": "Smartwatch Gamma",
+    "price": 370,
     "year": 2023,
-    "description": "A smartwatch with advanced health tracking and connectivity."
+    "description": "A smartwatch with comprehensive health tracking features.",
+    "owner": {
+      "name": "Fiona Glenanne",
+      "email": "fiona.glenanne@example.com"
+    }
   },
   {
     "id": 7,
-    "name": "Laptop G",
-    "price": 400,
+    "name": "Laptop Delta",
+    "price": 420,
     "year": 2021,
-    "description": "A premium laptop with top-notch build quality and performance."
+    "description": "A high-end laptop with exceptional build quality and performance.",
+    "owner": {
+      "name": "George Miller",
+      "email": "george.miller@example.com"
+    }
   },
   {
     "id": 8,
-    "name": "Tablet H",
-    "price": 450,
+    "name": "Tablet Epsilon",
+    "price": 470,
     "year": 2022,
-    "description": "A high-end tablet with a stunning display and powerful internals."
+    "description": "A premium tablet with a stunning display and powerful internals.",
+    "owner": {
+      "name": "Hannah Baker",
+      "email": "hannah.baker@example.com"
+    }
   },
   {
     "id": 9,
-    "name": "Smartphone I",
-    "price": 500,
+    "name": "Smartphone Theta",
+    "price": 520,
     "year": 2023,
-    "description": "A flagship smartphone with cutting-edge technology and design."
+    "description": "A flagship smartphone with the latest technology and design.",
+    "owner": {
+      "name": "Ian Fleming",
+      "email": "ian.fleming@example.com"
+    }
   },
   {
     "id": 10,
-    "name": "Smartwatch J",
-    "price": 550,
+    "name": "Smartwatch Iota",
+    "price": 570,
     "year": 2021,
-    "description": "A luxury smartwatch with premium materials and features."
+    "description": "A luxury smartwatch with premium materials and advanced features.",
+    "owner": {
+      "name": "Jane Doe",
+      "email": "jane.doe@example.com"
+    }
   }
 ]
