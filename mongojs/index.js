@@ -33,9 +33,31 @@ const Movie = mongoose.model("Movie", movieSchema);
 //     console.log(err);
 //   });
 
-Movie.findById("67bdedc37f87c313b52ba8a7")
-  .then((movie) => {
-    console.log(movie);
+// Movie.findById("67bdedc37f87c313b52ba8a7")
+//   .then((movie) => {
+//     console.log(movie);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+// Update One data in the database
+// Movie.updateOne({ title: "Parasite" }, { rating: 7.3 })
+//   .then((result) => {
+//     console.log(result);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+// Update data Find By ID
+Movie.findByIdAndUpdate(
+  "67bdedc37f87c313b52ba8a5",
+  { rating: 7.3 },
+  { new: true }
+)
+  .then((result) => {
+    console.log(result);
   })
   .catch((err) => {
     console.log(err);
