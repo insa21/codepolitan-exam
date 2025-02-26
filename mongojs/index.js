@@ -51,17 +51,34 @@ const Movie = mongoose.model("Movie", movieSchema);
 //   });
 
 // Update data Find By ID
-Movie.findByIdAndUpdate(
-  "67bdedc37f87c313b52ba8a5",
-  { rating: 7.3 },
-  { new: true }
-)
-  .then((result) => {
-    console.log(result);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+// Movie.findByIdAndUpdate(
+//   "67bdedc37f87c313b52ba8a5",
+//   { rating: 7.3 },
+//   { new: true }
+// )
+//   .then((result) => {
+//     console.log(result);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+//Delete
+// Movie.deleteOne({ title: "Parasite" })
+//   .then((result) => {
+//     console.log(result);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+// Movie.findByIdAndDelete("67bdedc37f87c313b52ba8a5")
+//   .then((result) => {
+//     console.log(result);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
 
 // Add data to the database using save
 // const movie = new Movie({
