@@ -63,7 +63,41 @@ const productSchema = new mongoose.Schema({
   },
 });
 
+productSchema.methods.outStock = function () {
+  this.stock = 0;
+  this.availability.online = false;
+  this.availability.offline = false;
+  return this.save();
+};
+
+productSchema.statics.closeStore = function () {
+  return this.updateMany(
+    {},
+    {
+      stock: 0,
+      "availability.online": false,
+      "availability.offline": false,
+    }
+  );
+};
+
 const Product = mongoose.model("Product", productSchema);
+
+const changeStock = async (id) => {
+  const foundProduct = await Product.findById(id);
+  await foundProduct.outStock();
+  console.log(foundProduct);
+};
+
+Product.closeStore()
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+// changeStock("67be8abb9b96c3921f21691c");
 
 // const tshirt = new Product({
 //   name: "T-Shirt",
